@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farhan's Gallery</title>
+  <link rel="icon" type="image/x-icon" href="images/frlogo.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://kit.fontawesome.com/9e9e882896.css" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    .heading {
+    text-align: center;
+    font-size: 2.0em;
+    letter-spacing: 1px;
+    padding: 40px;
+    color: white;
+}
+
+    .gallery-image {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    .gallery-image img {
+    height: 250px;
+    width: 350px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+    .img-box {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+    
+}
+
+    .caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+    .transparent-box {
+    height: 250px;
+    width: 350px;
+    background-color:rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+    .img-box:hover img { 
+    transform: scale(1.1);
+}
+
+    .img-box:hover .transparent-box {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+    .img-box:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+}
+
+    .img-box:hover {
+    cursor: pointer;
+}
+
+    .caption > p:nth-child(2) {
+    font-size: 0.8em;
+}
+
+    .opacity-low {
+    opacity: 0.5;
+}
+ </style>
+</head>
+  
+<body class="light-theme">
+  <header>
+
+    <div class="container">
+
+      <nav class="navbar">
+
+        <a href="index.html">
+          <img src="images/frlogo.ico" alt="Fr logo" width="90" class="logo-light">
+        </a>
+
+        <div class="btn-group">
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="flex-wrapper">
+
+          <ul class="desktop-nav">
+
+            <li>
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+
+            <li>
+              <a href="biodata.html" class="nav-link">About Me</a>
+            </li>
+
+            <li>
+              <a href="education.html" class="nav-link">Education</a>
+            </li>
+
+            <li>
+              <a href="experience.html" class="nav-link">Experience</a>
+            </li>
+
+            <li>
+              <a href="family.html" class="nav-link">Family</a>
+            </li>
+
+            <li>
+              <a href="gallery.html" class="nav-link">Gallery</a>
+            </li>
+
+            <li>
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+ 
+          </ul>
+
+        </div>
+
+        <div class="mobile-nav">
+
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="left" style="margin-top: 10px;">
+
+            <div class="pattern-bg"></div>
+            <div class="img-box">
+              <img src="images/frlogo.ico" alt="FR" width="150" class="hero-img">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+            </div>
+  
+          </div>
+  
+          <div class="wrapper" style="margin-left: 24px;">
+
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="biodata.html" class="nav-link">About Me</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact Me</a>
+              </li>
+
+             <li class="nav-item">
+                <a href="education.html" class="nav-link">Education</a>
+              </li>
+
+             <li class="nav-item">
+                <a href="experience.html" class="nav-link">Experience</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="family.html" class="nav-link">Family</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="gallery.html" class="nav-link">Gallery</a>
+              </li>
+ 
+            </ul>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!---GALLERY--->
+ 
+  <div class="main">
+	<h1>Gallery</h1>
+  <style>
+    h1 {color:white;}
+    h1 {margin-top: -50px;}
+  </style>
+  <div class="gallery-image">
+    <div class="img-box">
+      <img src="images/fr1.jpeg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Pemimpin Minggu Destini Siswa</p>
+          <p class="opacity-low">Biro Teknikal</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="images/fr2.jpeg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>INFORMA Club</p>
+          <p class="opacity-low">UiTM Kedah</p>
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="images/fr6.jpeg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Photoshoot KIM1105B</p>
+          <p class="opacity-low">Diploma in Information Management</p>
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="images/fr4.jpeg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>The Closest Friends IM110</p>
+          <p class="opacity-low">Tanjung Dawai, Kedah</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="images/fr5.jpeg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Best Friend from UiTM</p>
+          <p class="opacity-low">in KTM</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="images/fr3.jpeg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Best Friends from SocMed</p>
+          <p class="opacity-low">Kuala Lumpur</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="images/f1.jpeg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Family Photo</p>
+          <p class="opacity-low">EidFitri 2023</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="images/fm3.jpeg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>3 Siblings</p>
+          <p class="opacity-low">My Annoying Sister</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="images/f3.jpeg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Little Azureen</p>
+          <p class="opacity-low">My Childhood Picture 2007</p>
+        </div>
+      </div> 
+    </div>
+  </div>
+	</div>
+  
+   <!--- #FOOTER --->
+
+ <footer>
+
+    <div class="container">
+
+      <div class="wrapper">
+
+        <a href="#" class="footer-logo">
+          <img src="images/uitm.png" alt="UiTM Logo" width="100" class="logo-light">
+          <img src="images/uitm.png" alt="UiTM Logo" width="100" class="logo-dark">
+        </a>
+
+        <p class="footer-text">
+          UiTM Dihatiku.
+        </p>
+
+      </div>
+
+      <div class="wrapper">
+
+        <p class="footer-title">Quick Links</p>
+
+        <ul>
+
+          <li>
+            <a href="https://kedah.uitm.edu.my/" class="footer-link">UiTMK</a>
+          </li>
+
+          <li>
+            <a href="https://www.uitm.edu.my/index.php/ms/kenali-uitm/tentang-uitm" class="footer-link">About UiTM</a>
+          </li>
+
+          <li>
+            <a href="https://hea.uitm.edu.my/v4/index.php/corporate/contact-us" class="footer-link">Contact UiTM</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="wrapper">
+
+        <p class="footer-title">Social Media</p>
+
+        <ul>
+
+          <li>
+            <a href="https://www.tiktok.com/@azureenjuffri_" class="footer-link">Tiktok</a>
+          </li>
+
+          <li>
+            <a href="https://youtube.com/@azureenjuffri1790" class="footer-link">Youtube</a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/azureenjuffri/" class="footer-link">Instagram</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <p class="copyright">
+      &copy; Copyright 2023 | <a href="https://www.linkedin.com/in/nur-ain-azureen-609b86276/">Nur 'Ain Azureen</a>
+    </p>
+
+  </footer>
+
+  
+<!--- custom js link -->
+  <script src="js/script.js"></script>
+
+<!--- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>  
